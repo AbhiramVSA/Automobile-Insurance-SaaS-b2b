@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/claimsense-mark.svg" alt="Automobile outline beneath a claim trend line" width="112" />
+  <img src="assets/claimsense-logo.png" alt="Car protected by an insurance shield with a signal marker" width="200" />
 </p>
 
 <h1 align="center">ClaimSense</h1>
