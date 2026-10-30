@@ -17,6 +17,8 @@
 
 This repository contains a Streamlit welcome page, two claim-analysis pages, one FastAPI upload/read flow, and two prediction pipelines. It is an experiment, not a ready-to-deploy insurance service.
 
+Project team listed in the original README: Future Roommates? @ GDGC.
+
 ## Run the Streamlit page
 
 The project declares Python 3.13 or later and uses `uv.lock` for its Python dependencies.
@@ -48,6 +50,6 @@ The claim-check page sends requests to this API on port `8000`. The claim-value 
 - The prediction modules refer to model files at fixed Windows paths. Those model files are not in the repository, so the prediction flow does not run from a clean checkout.
 - The welcome page points to a page path that does not exist.
 - The claim-value page calls API routes that are not defined in the checked-in FastAPI module.
-- The project has no license file.
+- The original README identified this project as MIT, but the repository has no `LICENSE` file.
 
 These limits describe the source tree. The application was not started for this README update.
