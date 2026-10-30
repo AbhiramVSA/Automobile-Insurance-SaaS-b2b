@@ -39,7 +39,7 @@ The FastAPI source module is `app.main`. It declares these routes:
 | `POST` | `/upload-csv/` | Read a CSV, run the first prediction pipeline, and insert rows into Supabase. |
 | `GET` | `/get-model-data/` | Return up to 50 rows from the configured Supabase table. |
 
-The module reads `SUPABASE_URL` and `SUPABASE_PASSWORD` from its settings. The API does not run from a clean install: its prediction module imports `joblib` and scikit-learn, which the project dependencies do not list. The model files that the prediction code references are also absent.
+The module reads `SUPABASE_URL` and `SUPABASE_PASSWORD` from its settings. The API does not run from a clean install: its prediction module imports `joblib`, which the project dependencies do not list. The model files that the prediction code references are also absent.
 
 The claim-check page sends requests to this API on port `8000`. The claim-value page calls separate model-two routes, but this repository does not define those routes.
 
