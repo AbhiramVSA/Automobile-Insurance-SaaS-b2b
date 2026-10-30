@@ -32,18 +32,14 @@ The two files under `pages/` define the claim-check and claim-value pages. The w
 
 ## API
 
-The checked-in FastAPI module is `app.main`. It defines these routes:
+The FastAPI source module is `app.main`. It declares these routes:
 
 | Method | Route | Purpose in source |
 |---|---|---|
 | `POST` | `/upload-csv/` | Read a CSV, run the first prediction pipeline, and insert rows into Supabase. |
 | `GET` | `/get-model-data/` | Return up to 50 rows from the configured Supabase table. |
 
-The module reads `SUPABASE_URL` and `SUPABASE_PASSWORD` from its settings. To start the API after you configure those values in a local `.env` file, run:
-
-```bash
-uv run uvicorn app.main:app --reload
-```
+The module reads `SUPABASE_URL` and `SUPABASE_PASSWORD` from its settings. The API does not run from a clean install: its prediction module imports `joblib` and scikit-learn, which the project dependencies do not list. The model files that the prediction code references are also absent.
 
 The claim-check page sends requests to this API on port `8000`. The claim-value page calls separate model-two routes, but this repository does not define those routes.
 
@@ -54,4 +50,4 @@ The claim-check page sends requests to this API on port `8000`. The claim-value 
 - The claim-value page calls API routes that are not defined in the checked-in FastAPI module.
 - The project has no license file.
 
-These limits describe the checked-in source. The application was not started for this README update.
+These limits describe the source tree. The application was not started for this README update.
